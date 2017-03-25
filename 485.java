@@ -4,15 +4,13 @@ public class Solution {
          int max = 0;
          for(int i=0;i<nums.length;i++){
              if(nums[i]==1){
-                 for(int j=i;j<nums.length;j++){
-                     if(nums[j]==1)count++;
-                     else break;
+                     count++;
+                     if(count > max){
+                        max=count;
+                    }
                  }
-                 if(count>max)max=count;
-                 
+                 else count =0;
              }
-             count = 0;
-         }
-         return max;
+              return max;
+         } 
     }
-}
